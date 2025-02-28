@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import "./PostingArear.css";
 import { Avatar } from '@mui/material';
 import VideocamIcon from '@mui/icons-material/Videocam';
@@ -6,6 +6,7 @@ import PhotoLibraryIcon from '@mui/icons-material/PhotoLibrary';
 import InsertEmoticonIcon from '@mui/icons-material/InsertEmoticon';
 
 function PostingArear() {
+    const [input, setInput] = useState("");
     const handleButtonSubmit = (e) =>{
         e.preventDefault();
     }
@@ -14,7 +15,9 @@ function PostingArear() {
         <div className="posting__top">
         <Avatar />
             <form>
-                <input className='input__text' placeholder={`What's on your mind? `} />
+                <input className='input__text' value={input}
+                onChange={(e) => setInput(e.target.value)}
+                placeholder={`What's on your mind? `} />
                 <input placeholder='Image url (optional)' />
                 <button onClick={handleButtonSubmit} type='submit'>
                     hidden button
