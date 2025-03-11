@@ -5,4 +5,10 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  width: 50%;
+}
+@media (max-width: 900px) {
+  .feed {
+    width: 100%;
+  }
 }

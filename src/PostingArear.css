@@ -51,3 +51,22 @@
   border-radius: 20px;
   cursor: pointer;
 }
+
+@media (max-width: 900px) {
+  .posting__top .avatar {
+    width: 30px;
+    height: 30px;
+  }
+  .posting__top form input {
+    width: 15%;
+  }
+  .posting__option h3 {
+    display: none;
+  }
+  .posting__option {
+    padding: 5px;
+  }
+  .posting__area {
+    width: 100%;
+  }
+}

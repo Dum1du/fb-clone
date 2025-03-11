@@ -36,7 +36,7 @@ function Posts({image, profilePic, username, caption, timestamp}) {
                 <NearMeIcon />
                 <p>Share</p>
             </div>
-            <div className="reaction">
+            <div className={`reaction extraClass`}>
                 <AccountCircleIcon />
                 <ExpandMoreIcon />
             </div>

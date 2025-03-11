@@ -37,8 +37,9 @@ function PostingArear() {
 
   return (
     <div className="posting__area">
+
       <div className="posting__top">
-        <Avatar src={user.photoURL} />
+        <Avatar src={user.photoURL} className="avatar"/>
         <form onSubmit={handleButtonSubmit}> {/* ✅ Form should handle submission */}
           <input
             className="input__text"
@@ -54,6 +55,7 @@ function PostingArear() {
           <button type="submit">Hidden Button</button> {/* ✅ Submit inside form */}
         </form>
       </div>
+
       <div className="posting__bottom">
         <div className="posting__option">
           <VideocamIcon style={{ color: "red" }} />

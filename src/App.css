@@ -16,4 +16,7 @@
   .widgets {
     display: none;
   }
+  .feed {
+    width: 100%;
+  }
 }
