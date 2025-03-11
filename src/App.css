@@ -1,7 +1,19 @@
 .app {
   background-color: #f1f2f5;
-  height: 100vh;
 }
 .app__body {
   display: flex;
+  justify-content: space-evenly;
+  overflow: hidden;
+}
+
+/* smaller screens */
+
+@media (max-width: 900px) {
+  .side__bar {
+    display: none;
+  }
+  .widgets {
+    display: none;
+  }
 }

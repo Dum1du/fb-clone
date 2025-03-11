@@ -1,0 +1,12 @@
+.test__wid {
+  width: 250px;
+  height: 550px; /* Define a fixed height */
+  position: fixed;
+  top: 80px;
+  right: 20px;
+  padding: 20px 30px;
+  overflow-y: hidden; /* Now scrolling will work */
+}
+.test__wid:hover {
+  overflow-y: auto;
+}

@@ -1,4 +1,3 @@
-import React from 'react';
 import "./Header.css";
 import SearchIcon from '@mui/icons-material/Search';
 import HomeIcon from '@mui/icons-material/Home';
@@ -11,17 +10,23 @@ import AddIcon from '@mui/icons-material/Add';
 import ForumIcon from '@mui/icons-material/Forum';
 import NotificationsActiveIcon from '@mui/icons-material/NotificationsActive';
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
+import { useStateValue } from "./StateProvider";
 
 function Header() {
+  const [{user}, dispatch] = useStateValue();
+
   return (
     <div className='header'>
       {/* header__left */}
         <div className="header__left">
-            <img src='https://upload.wikimedia.org/wikipedia/commons/thumb/b/b9/2023_Facebook_icon.svg/800px-2023_Facebook_icon.svg.png'></img>
+            <img src='https://upload.wikimedia.org/wikipedia/commons/thumb/b/b9/2023_Facebook_icon.svg/800px-2023_Facebook_icon.svg.png' alt=""></img>
 
             <div className="header__input">
+             
                 <SearchIcon />
                 <input placeholder='Search Facebook' type='text' />
+              
+                
             </div>
         </div>
 
@@ -47,8 +52,8 @@ function Header() {
       {/* header__right */}
         <div className="header__right">
           <div className="header__info">
-            <Avatar />
-            <h4>Dumidu</h4>
+            <Avatar  src={user.photoURL}/>
+            <h4>{user.displayName}</h4>
           </div>
 
           <IconButton>

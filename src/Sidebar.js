@@ -7,11 +7,14 @@ import ChatIcon from '@mui/icons-material/Chat';
 import StorefrontIcon from '@mui/icons-material/Storefront';
 import VideoLibraryIcon from '@mui/icons-material/VideoLibrary';
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
+import { useStateValue } from './StateProvider';
 
 function Sidebar() {
+    const [{user}, dispatch] = useStateValue();
+
     return (
         <div className='sidebar'>
-            <SidebarRow title= "Dumidu" src= "https://th.bing.com/th/id/OIP.PfUfcC2sJ_gozk0HrrCGLAHaHa?rs=1&pid=ImgDetMain" />
+            <SidebarRow title= {user.displayName} src= {user.photoURL} />
             <SidebarRow title = "Pages" Icon={EmojiFlagsIcon}/>
             <SidebarRow title = "Friends" Icon={PeopleIcon}/>
             <SidebarRow title= "Messanger" Icon={ChatIcon}/>
